@@ -1,6 +1,3 @@
-Certo! Ecco un esempio di codice in C++ per creare un semplice chatbot locale. Questo chatbot risponde a domande predefinite. Puoi espandere il set di domande e risposte secondo le tue esigenze.
-
-```cpp
 #include <iostream>
 #include <string>
 #include <unordered_map>

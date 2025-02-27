@@ -38,7 +38,7 @@ int main() {
     ChatBot chatbot;
     std::string userInput;
 
-    std::cout << "Benvenuto nel chatbot! Digita 'addio' per uscire.\n";
+    std::cout << "Benvenuto nel chatbot! Digita 'addio' per uscire, oppure 'ciao' per iniziare\n";
     while (true) {
         std::cout << "Tu: ";
         std::getline(std::cin, userInput);

@@ -1,0 +1,59 @@
+Certo! Ecco un esempio di codice in C++ per creare un semplice chatbot locale. Questo chatbot risponde a domande predefinite. Puoi espandere il set di domande e risposte secondo le tue esigenze.
+
+```cpp
+#include <iostream>
+#include <string>
+#include <unordered_map>
+
+class ChatBot {
+public:
+    ChatBot() {
+        // Inizializza il dizionario di domande e risposte
+        responses["ciao"] = "Ciao! Come posso aiutarti oggi?";
+        responses["come stai?"] = "Sto bene, grazie! E tu?";
+        responses["qual è il tuo nome?"] = "Sono un chatbot creato in C++!";
+        responses["addio"] = "Arrivederci! È stato un piacere parlare con te.";
+    }
+
+    std::string getResponse(const std::string& input) {
+        // Converti l'input in minuscolo per una corrispondenza case-insensitive
+        std::string lowerInput = toLower(input);
+        if (responses.find(lowerInput) != responses.end()) {
+            return responses[lowerInput];
+        } else {
+            return "Mi dispiace, non ho capito la tua domanda.";
+        }
+    }
+
+private:
+    std::unordered_map<std::string, std::string> responses;
+
+    std::string toLower(const std::string& str) {
+        std::string lowerStr = str;
+        for (char& c : lowerStr) {
+            c = tolower(c);
+        }
+        return lowerStr;
+    }
+};
+
+int main() {
+    ChatBot chatbot;
+    std::string userInput;
+
+    std::cout << "Benvenuto nel chatbot! Digita 'addio' per uscire.\n";
+    while (true) {
+        std::cout << "Tu: ";
+        std::getline(std::cin, userInput);
+        if (userInput == "addio") {
+            std::cout << "ChatBot: " << chatbot.getResponse(userInput) << "\n";
+            break;
+        }
+        std::cout << "ChatBot: " << chatbot.getResponse(userInput) << "\n";
+    }
+
+    return 0;
+}
+```
+
+Questo codice crea un chatbot che risponde a domande predefinite. Puoi eseguire il programma in un ambiente di sviluppo C++ e interagire con il chatbot tramite la console. Se hai altre domande o hai bisogno di ulteriori funzionalità, fammelo sapere!

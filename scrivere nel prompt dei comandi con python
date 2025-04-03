@@ -1,0 +1,7 @@
+import subprocess
+
+# Comando che vuoi eseguire
+comando = "echo Ciao, mondo!"
+
+# Esegui il comando
+subprocess.run(comando, shell=True)

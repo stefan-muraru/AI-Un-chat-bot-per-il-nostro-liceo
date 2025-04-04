@@ -1,0 +1,15 @@
+import ollama
+
+def main():
+    # Carica il modello DeepSeek R1
+    model = ollama.load_model("deepseek-r1")
+
+    # Esegui una chat di esempio
+    user_input = "Ciao, come posso aiutarti?"
+    response = model.chat(user_input)
+
+    # Stampa la risposta del modello
+    print("Risposta del modello:", response)
+
+if __name__ == "__main__":
+    main()

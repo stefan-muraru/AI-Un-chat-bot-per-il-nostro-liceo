@@ -1,0 +1,41 @@
+# 1️⃣ Leggi il contenuto del file di testo
+with open("C:/Users/vital/Desktop/python/Liceo_Tosi.txt", "r", encoding="utf-8") as file:
+    contenuto_scuola = file.read()
+
+# 2️⃣ Inizializza la cronologia della conversazione con un messaggio di sistema
+messages = [
+    {
+        'role': 'system',
+        'content': (
+            "Sei un assistente virtuale del Liceo Tosi. Rispondi alle domande usando solo le informazioni seguenti:\n\n"
+            f"{contenuto_scuola}\n\n"
+            "Se le informazioni non sono presenti nel testo, rispondi che non puoi rispondere."
+        )
+    }
+]
+
+print("Assistente del Liceo Tosi attivo. Scrivi 'esci' per uscire.\n")
+
+# 3️⃣ Ciclo per domande e risposte
+while True:
+    messaggio = input("Tu: ")
+
+    if messaggio.strip().lower() in ["esci", "exit", "quit"]:
+        print("Conversazione terminata.")
+        break
+
+    messages.append({
+        'role': 'user',
+        'content': messaggio
+    })
+
+    # Ottieni la risposta dal modello locale
+    response: ChatResponse = chat(model='deepseek-r1', messages=messages)
+
+    messages.append({
+        'role': 'assistant',
+        'content': response.message.content
+    })
+
+    print("\nAssistente:", response.message.content)
+    print("-" * 60)

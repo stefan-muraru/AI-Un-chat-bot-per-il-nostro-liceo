@@ -1,0 +1,33 @@
+from ollama import chat, ChatResponse
+
+with open("Liceo_Tosi1.txt", "r", encoding="utf-8") as file:
+    contenuto_scuola = file.read()
+
+print("Assistente del Liceo Tosi attivo. Scrivi 'esci' per uscire.\n")
+
+while True:
+    messaggio = input("Tu: ")
+    if messaggio.strip().lower() in ["esci", "exit", "quit", "end", "fine", "stop"]:
+        print("Conversazione terminata.")
+        break
+
+    prompt_completo = (
+        "Sei un assistente virtuale del Liceo Tosi. Rispondi solo usando le informazioni seguenti:\n\n"
+        f"{contenuto_scuola}\n\n"
+        f"Domanda: {messaggio}\n"
+        "Risposta:"
+    )
+
+    messages = [
+        {'role': 'user', 'content': prompt_completo}
+    ]
+
+    print("\nAssistente: ", end="", flush=True)
+    try:
+        for chunk in chat(model='gemma3', messages=messages, stream=True):
+            if chunk and chunk.message and chunk.message.content:
+                print(chunk.message.content, end="", flush=True)
+    except Exception as e:
+        print(f"\nErrore nella chiamata al modello: {e}")
+    
+    print("\n" + "-" * 60)

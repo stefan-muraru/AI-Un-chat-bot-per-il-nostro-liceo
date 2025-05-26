@@ -1,6 +1,6 @@
 from ollama import chat, ChatResponse
 
-with open("C:/Users/vital/Desktop/python/Liceo_Tosi_QA.txt", "r", encoding="utf-8") as file:
+with open("Liceo_Tosi.txt", "r", encoding="utf-8") as file:
     contenuto_scuola = file.read()
 
 print("Assistente del Liceo Tosi attivo. Scrivi 'esci' per uscire.\n")

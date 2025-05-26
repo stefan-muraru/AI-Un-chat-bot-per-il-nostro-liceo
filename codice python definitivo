@@ -1,6 +1,6 @@
 from ollama import chat, ChatResponse
 
-with open("Liceo_Tosi1.txt", "r", encoding="utf-8") as file:
+with open("C:/Users/vital/Desktop/python/Liceo_Tosi_QA.txt", "r", encoding="utf-8") as file:
     contenuto_scuola = file.read()
 
 print("Assistente del Liceo Tosi attivo. Scrivi 'esci' per uscire.\n")
@@ -12,10 +12,11 @@ while True:
         break
 
     prompt_completo = (
-        "Sei un assistente virtuale del Liceo Tosi. Rispondi solo usando le informazioni seguenti:\n\n"
+        "Agisci come un assistente scolastico del Liceo Tosi. Rispondi usando solo le informazioni seguenti, "
+        "ma in modo **chiaro, completo, anche con elenchi se serve**, e con un tono amichevole ma professionale.\n\n"
         f"{contenuto_scuola}\n\n"
         f"Domanda: {messaggio}\n"
-        "Risposta:"
+        "Risposta completa:"
     )
 
     messages = [

@@ -21,4 +21,4 @@ abbiamo utilizzato llama per scaricare una versione base di gemma 3.1, lo abbiam
 
 ### La "personalizzazione":
 
-per "personalizzare" il nostro chat bot abbiamo utilizzato un metodo non legato al machine learning poichè sarebbe stato troppo complicato, e noi studenti non avevamo le competenze per farlo. Quindi per fare ciò, abbiamo fatto in modo che (tramite uno script python) che prima di rispondere ad ogni domanda, il chat bot leggesse un file .txt che li davamo "in pasto" per farli avere le informazioni del nostro liceo.
+per "personalizzare" il nostro chat bot abbiamo utilizzato un metodo non legato al machine learning poichè sarebbe stato troppo complicato, e noi studenti non avevamo le competenze per farlo. Quindi per fare ciò, abbiamo fatto in modo che (tramite uno script python) che prima di rispondere ad ogni domanda, il chat bot leggesse un file .txt che li davamo "in pasto" per fargli avere le informazioni del nostro liceo.

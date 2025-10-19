@@ -2,6 +2,8 @@
 
 Questo è un progetto scolastico, che sarà presentato al JRC di Ispra.
 
+Il progetto è sotto copyright e riserva tutti i permessi all'autore, come indicato nel file "LICENSE".
+
 Il progetto è volto alla realizzazione di un chat bot che possa fungere da "assistente digitale" della scuola,
 può fornire varie informazioni sulla scuola che possono essere utili agli utenti del nostro liceo.
 Abbiamo inserito all'interno della repository di github tutto il codice utilizzato, anche quello scartato poichè la repository è stata utilizzata anche per scarmbiarci file, come un vero team di sviluppo.

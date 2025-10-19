@@ -1,4 +1,4 @@
-RAGA HO CAPITO COME INSTALLARE LLAMA IN LOCALE, PROSSIMA VOLTA CHE CI VEDIAMO LO INSTALLIAMO SUL PC DELLA SCUOLA!
+COME INSTALLARE LLAMA IN LOCALE
 llama va scaricato sul computer su cui si vuole fare e su qui va fatto il progetto, quindi non serve installarlo ognuno sul nostro (se volete farlo vi lascio sotto come fare) quindi lo facciamo su quello della scuola...
 
 come scaricarlo: 

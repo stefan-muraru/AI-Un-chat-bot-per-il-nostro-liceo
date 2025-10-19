@@ -1,8 +1,10 @@
+This project is publicly available for viewing and educational purposes only.  
+
+For details about rights and usage, see the [LICENSE](LICENSE) file.
+
 # Ai- un chat-bot per il nostro liceo
 
 Questo è un progetto scolastico, che sarà presentato al JRC di Ispra.
-
-Il progetto è sotto copyright e riserva tutti i permessi all'autore, come indicato nel file "LICENSE".
 
 Il progetto è volto alla realizzazione di un chat bot che possa fungere da "assistente digitale" della scuola,
 può fornire varie informazioni sulla scuola che possono essere utili agli utenti del nostro liceo.
